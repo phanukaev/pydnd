@@ -3,7 +3,7 @@ Race        Tabaxi
 Player      Peter
 Background  Urchin
 Alignment   Neutral Good
-Experience  ---
+Experience  asdf
 
 Str  7
 Dex 16
