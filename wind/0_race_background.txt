@@ -1,0 +1,40 @@
+########################
+#                      #
+# Tabaxi racial traits #
+#                      #
+########################
+
+Speed 30
+Speed 20 Climb
+
+Feature Darkvision
+    Out to a range of 60ft.
+
+Feature Feline Agility
+    Double movement speed for one turn.
+    Cannot be used again until I haven't moved on one of my turns.
+
+Perception  proficiency
+Stealth     proficiency
+
+Language Common, Halfling
+
+
+###################
+#                 #
+# Urchin Features #
+#                 #
+###################
+
+SleightOfHand proficiency
+Acrobatics    proficiency
+# Jonas said if I got the same skill proficiency from multiple sources,
+# I could choose a different one instead
+# So, I replaced stealth by acrobatics
+# (fitting with the background of travelling with a circus)
+
+Feature City Secrets
+    While not in combat,
+    travel between any two locations in a city twice as fast.
+
+Tool Disguise Kit, Thieves' Tools

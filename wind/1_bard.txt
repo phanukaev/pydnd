@@ -1,0 +1,95 @@
+Class Bard 9
+
+#                  #
+# Level 1 features #
+#                  #
+
+Dex saves proficiency
+Cha saves proficiency
+
+#Proficiency Armor
+#    Light Armor
+
+#Proficiency Weapon
+#    Simple Weapons,
+#    Hand Crossbows,
+#    Longswords,
+#    Rapiers,
+#    Shortswords
+
+#three musical instruments of my choice
+Tool Shawm, Lute, Dulcimer
+
+# Proficiency in 3 skills of my choice.
+Deception	proficiency
+Persuasion	proficiency
+History		proficiency
+
+# Bardic Inspiration
+Bonus Bardic Inspiration
+
+Feature Bardic Inspiration (d8)
+    As a bonus action, give an inspiration die to another creature.
+    They may add it to an ability check, attack roll or saving throw.
+    Can be used a number of times equal to your charisma modifier ([ChaMod]);
+    regain all uses on a short or long rest.
+
+##############################
+#                            #
+# 2nd Level Bard features    #
+#                            #
+##############################
+# became a d8 at level 8
+Feature Song of Rest (d8)
+    If an ally uses hit dice during a short rest,
+    they restore an additional 1d8 hit points.
+
+
+#                                       #
+# Jack of all Trades                    #
+#                                       #
+Str checks semiproficiency
+Dex checks semiproficiency
+Con checks semiproficiency
+Int checks semiproficiency
+Wis checks semiproficiency
+Cha checks semiproficiency
+
+
+##############################
+#                            #
+# 3rd Level Bard features    #
+#                            #
+##############################
+
+#                                  #
+# Bard College (College of Lore)   #
+#                                  #
+
+#                                      #
+# Bonus proficiencies (3 of my choice) #
+#                                      #
+Insight         proficiency              
+Investigation   proficiency
+Religion        proficiency
+
+#                 #
+#  Cutting Words  #
+#                 #
+
+Feature Cutting Words
+    As a reaction, use a bardic inspiration die
+    and subtract the number rolled from an
+    attack roll,
+    ability check
+    or damage roll
+    made by another creature you can see within 60 ft.
+
+Reaction Cutting Words
+
+#                                      #
+# Expertise in two skills of my choice #
+#                                      #
+
+Persuasion      expertise
+Investigation   expertise

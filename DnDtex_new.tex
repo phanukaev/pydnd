@@ -1,0 +1,329 @@
+\documentclass[12pt]{article}
+\usepackage{libertine}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage[T1]{fontenc}
+\usepackage[letterpaper,left=0mm,right=0mm,top=0mm,bottom=0mm,nohead,nofoot]{geometry}
+%\usepackage{eso-pic}            							%Background
+\usepackage{graphicx}		            					%Background, general utility
+%\usepackage[contents={},opacity=0]{background}				%Background
+\usepackage[english]{babel}
+\usepackage{multicol}
+%\def\columnseprule{.4pt}
+\setlength{\columnsep}{18bp}
+
+\usepackage{tikz}
+	\usetikzlibrary{shapes.geometric}
+	\usetikzlibrary{calc}
+
+\usepackage{xcolor}				%Colored text
+\definecolor{advantage}{rgb}{0,.8,.33}
+\definecolor{disadvantage}{rgb}{.8,0,.47}
+\definecolor{vantage}{rgb}{.8,.73,0}
+\definecolor{expertise}{rgb}{0,.07,8}
+\usepackage[most]{tcolorbox}
+\tcbset{
+  standard jigsaw,
+  colframe = black,
+  opacityback= 0,
+  opacityframe=0,
+  size=tight,
+  nobeforeafter,
+  halign=flush left,
+  valign=center,
+  fit fontsize macros,
+  fit algorithm=fontsize,
+}
+
+% --- Formatting --- %
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\baselineskip}{0pt}
+
+\newcommand{\headedtext}[4]{
+    {#1 #2}{#4} #3\par
+}
+\newcommand{\spacer}[1][-.25ex]{{\color{black!20}\vspace{-1.5ex}\hrulefill}\par\vspace{#1}}
+
+% --- Attacks --- %
+%opacityframe=0,
+\newcommand{\attack}[3]{%
+\tcboxfit[valign = center, halign = center, width = .89in, height = .215in]{ #1 }%
+\hspace{.05in}%
+\tcboxfit[valign = center, halign = center, width = .44in, height = .215in]{ #2 }%
+\hspace{.06in}%
+\tcboxfit[valign = center, halign = center, width = .87in, height = .215in]{ #3 }%
+}
+% --- Background --- %
+\newcommand{\drawbackgroundimage}{%
+    \AddToHookNext{shipout/background}{\put(2.5pt,-11in){%
+                    \includegraphics[%page=1,
+                    width=\paperwidth,
+                    height=\paperheight,
+                    keepaspectratio
+                    ]{\@backgroundimage@path}%
+        }
+    }
+}
+\newcommand{\drawbackgroundgrid}{ %%% GRID FOR SETTING UP TIKZ NODES, IGNORE %%%
+	\backgroundsetup{%
+		position={0,0},opacity=0.2,placement=center,angle=0,scale=1,contents={%
+		    \begin{tikzpicture}[remember picture, overlay, shift=(current page.south west)]
+		        \draw[step=1in, line width=1.5pt, black] (0mm,0mm) grid (\paperwidth,\paperheight);
+		        \draw[help lines, step=.1in,ultra thin] (0mm,0mm) grid (\paperwidth,\paperheight);
+		    \end{tikzpicture}
+		}
+	}
+	\BgThispage
+}
+
+\def\@backgroundimage@path{background.pdf}
+\newcommand{\BackgroundImage}[1]{\def\@backgroundimage@path{#1}}
+
+\BackgroundImage{3pgsSheet.pdf}
+
+% --- Other Formatting things --- %
+%\DeclareRobustCommand{\plus}{\raisebox{.25\height}{\scalebox{.8}{+}}}
+%\DeclareRobustCommand{\minus}{\raisebox{.14\height}{-}}
+\DeclareRobustCommand{\minus}{-}
+\DeclareRobustCommand{\plus}{+}
+
+\newcommand{\modbullet}[4]{ \node at (current) [
+                shape=star,
+                star points = 17,
+                star point ratio = 1.3,
+                line width = 0pt,
+                %shape = circle,
+                %minimum size=.275in,
+                %line width = 1.5pt,
+                anchor=center,
+                draw=#1, fill=#2 ]
+                { \color{#3}\large \rotatebox{12}{#4}};
+            }
+\newcommand{\xbullet}[2]{ \node at (current) [
+                shape=circle, minimum size=7pt,
+                anchor=center, line width = 1.5pt,
+                draw = #1, fill= #2 ]
+                {};
+            }
+
+
+% --- load the variables from external file --- %
+\input{variables.tex}
+
+\begin{document}
+
+\drawbackgroundimage
+%\drawbackgroundgrid
+\null
+	\begin{tikzpicture}[%
+		x=1in,
+		y=1in,
+		remember picture,
+		overlay,
+        shift=(current page.south west),
+		every node/.style={
+            anchor=base west,
+            inner sep=0mm,
+            %draw = red
+        },
+		]
+		%Name
+		%And info int the top right corner
+		\begin{scope}[every node/.append style={anchor=base west}]
+		    \node at (0.65,9.85) [align = center] {
+			\tcboxfit[width = 2.5in,height = .29in, halign = flush center]{ \Huge\scshape\Name }
+		    };
+            \node at (3.78,10.12)	{ \tcboxfit[width=1.5in,   valign = bottom,  height=.2in]    {\scshape\LARGE \ClassLevel} };
+		    \node at (5.35,10.12)   { \tcboxfit[width=1.25in,  valign = bottom,  height=.2in]    {\scshape\LARGE \Background} };
+		    \node at (6.7,10.12)    { \tcboxfit[width=1.2in,   valign = bottom,  height=.2in]    {\scshape\LARGE \Player    } };
+            \node at (3.78,9.76)    { \tcboxfit[width=1.5in,   valign = bottom,  height=.2in]    {\scshape\LARGE \Race      } };
+		    \node at (5.35,9.76)    { \tcboxfit[width=1.25in,  valign = bottom,  height=.2in]    {\scshape\LARGE \Alignment } };
+		    \node at (6.7,9.76)     { \tcboxfit[width=1.2in,   valign = bottom,  height=.2in]    {\scshape\LARGE \Experience} };
+		\end{scope}
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		%
+		%  Ability socres and modifiers
+		%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\coordinate (current) at (.41,8.55);
+        \def\abyoffset{.28}
+        \def\abystep{.994}
+        \foreach \amod in \abilitymods{
+            \node at (current) [shape = rectangle, minimum width = .833in]{\Huge  \amod};
+            \coordinate (current) at ($(current)-(0,\abystep)$);
+        }
+        \coordinate (current) at ($(.41,8.55)-(0,\abyoffset)$);
+        \foreach \ability in \abilities{
+            \node at (current) [shape=rectangle, minimum width = .833in] {\large \ability};
+            \coordinate (current) at ($(current)-(0,\abystep)$);
+        }
+        % Ability Check modifiers
+        \coordinate (current) at (1.12,8.93);
+        \foreach \abchkMod in \abchkMods{
+            \abchkMod
+            \coordinate (current) at ($(current)-(0,\abystep)$);
+        }
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		%
+		%  Passive Perception
+		%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        \node at (0.4,2.5) [shape = rectangle, minimum width = .45in, minimum height = .35in, anchor= south west]{
+                \LARGE \PassPerc
+            };
+
+
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		%
+		%  Saving Throws
+		%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		
+		\def\bulletystep{0.1875in}
+		\def\modxoffset{0.557cm}
+		\def\modxofffset{0.522cm}
+		\def\modyoffset{-0.095cm}
+		\coordinate (current) at (1.4874,8.0652);
+
+		\foreach \savebullet in \savebullets{
+            \savebullet
+		    \coordinate (current) at ($(current)-(0,\bulletystep)$);
+		}
+        \coordinate (current) at ($(1.4874,8.0652)+(\modxoffset,\modyoffset)$);
+		\foreach \savemod in \savemods{
+            \node at (current) [ anchor = base ] { \small \savemod };
+		    \coordinate (current) at ($(current)-(0,\bulletystep)$);
+		}
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		%
+		%  Skill Checks
+		%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+        \coordinate (current) at (1.4874,6.4646);
+		\foreach \sbullet in \skillbullets{
+            \sbullet
+		    \coordinate (current) at ($(current)-(0,\bulletystep)$);
+		}
+        \coordinate (current) at ($(1.4874,6.4646)+(\modxofffset,\modyoffset)$);
+        \foreach \skillmod in \skillmods{
+            \node at (current) [ anchor = base ] { \small \skillmod };
+            \coordinate (current) at ($(current)-(0,\bulletystep)$);
+        }
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		%
+		%  Proficiency Bonus
+		%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        \node at (1.3,8.3) [
+            anchor = south west,
+            shape = rectangle,
+            minimum width = .48in,
+            minimum height = .48in,
+            ]
+            { \LARGE \profBonus };
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		%
+		%  Armor Class, Initiative, Speed
+		%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        \node at (3.475,8.72) [
+            anchor = base,
+            shape = rectangle,
+            ]
+            { \Huge \armorClass };
+        \node at (3.91,8.55) [
+            anchor = south west,
+            shape = rectangle,
+            minimum width = .69in,
+            minimum height = .54in
+            ]
+            { \Huge \Initiative };
+        \node at (4.755,8.56) [
+            anchor = south west,
+            ]
+            { \tcboxfit[width = .627in, height = .54in]{ { \begin{center} \movement \end{center}} } };
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        %
+        % Hit points
+        %
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        \node at (4.1,8.125) [
+            anchor = south west
+            ]{ \large\hitPoints };
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        %
+        % Attacks & Spellcasting
+        %
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        \node at (3.13,5.335) [anchor = south west]
+            {
+                \Attacki
+            };
+        \node at (3.13,5.048) [anchor = south west]
+            {
+                \Attackii
+            };
+        \node at (3.13,4.765) [anchor = south west]
+            {
+                \Attackiii
+            };
+        \node at (3.15,3.1) [
+            anchor = south west
+            ]
+            {
+                \tcboxfit[valign = top, width = 2.3in, height = 1.6in , ] {
+                    \small
+                    \Actions
+            }};
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        %
+        % Equipment
+        %
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        \node at (3.75,.5) [
+            anchor = south west
+            ]
+            {
+                \tcboxfit[valign = top, width = 1.7in, height = 2.25in , ] {
+                    \small
+                    \Equipment
+            }};
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        %
+        % Features & Traits
+        %
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        \node at (5.75,.5) [
+            anchor = south west
+            ]
+            {
+                \tcboxfit[halign = justify, valign = top, width = 2.3in, height = 5.1in , ] {
+                    \small
+                    \Features
+            }};
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        %
+        % Other Proficiencies
+        %
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        \node at (0.5,0.5) [
+            anchor = south west
+            ]
+            {
+                \tcboxfit[valign = top, width = 2.3in, height = 1.8in , ] {
+                    \small
+                    \Proficiencies
+            }};
+	  \end{tikzpicture}
+      \newgeometry{left=.5in,right=.5in,top = .5in, bottom = .5in}
+
+      \normalsize
+      \begin{multicols}{2}
+          \setcounter{minrows}{15}
+      \EquipDump
+      \end{multicols}
+
+\end{document}
+

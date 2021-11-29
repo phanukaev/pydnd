@@ -1,0 +1,31 @@
+#                          #
+# Inspiring Leader at Lv 4 #
+#                          #
+Feature Inspiring Leader
+    Give a 10 minute speech.
+    Grant up to 6 allies temporary hit points equal to
+    your level + charisma modifer ([Level + ChaMod]).
+
+#             #
+# ASI at Lv 8 #
+#             #
+Cha +2
+
+
+#            #
+# Actor Feat #
+#            #
+Feature Actor (partial)
+    2/5 towards:
+    Advantage on Charisma (Decption or Perfomrance)
+    checks when trying to pass myself off as another person.
+
+#               #
+# Linguist Feat #
+#               #
+
+Feature Linguist (partial)
+    Learn 3 languages of my choice.
+    1) Aquan.
+
+Language Aquan

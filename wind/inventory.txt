@@ -1,0 +1,136 @@
+##################################
+#                                #
+#          Misc Items            #
+#                                #
+##################################
+
+Equip
+    Common Clothes
+    Traveller's Clothes
+    Lute
+    Rations (14)
+    Disguise Kit
+    Wildmagic Schnapps (10)
+
+##################################
+#                                #
+#        Attuned Items           #
+#                                #
+##################################
+Attuned Stone of Good Luck
+    While this polished agate is on your person,
+    you gain a +1 bonus to ability checks and saving throws.
+
+Str checks +1
+Dex checks +1
+Con checks +1
+Int checks +1
+Wis checks +1
+Cha checks +1
+
+Str saves +1
+Dex saves +1
+Con saves +1
+Int saves +1
+Wis saves +1
+Cha saves +1
+
+Attuned Gauntlets of Ogre Power
+    Your Strength score is 19 while you wear these gauntlets.
+    They have no effect on you if your Strength is 19 or higher without them.
+
+Str 19
+
+##################################
+#                                #
+#             Armor              #
+#                                #
+##################################
+Armor Glamoured Studded Leather
+    Grants an AC of 12 + Dexterity Modifier.
+    Can use my bonus action to speak its command word.
+    The armor assumes the appearance of a normal set of clothing.
+    I may decide what it looks like, inclding color, style and accesories.
+    The armor retains its normal bulk and weight.
+
+AC 12 + DexMod
+# Does not grant the +1 to AC that usual Glamoured Studded Leather would
+# But bumped down a rarity level and thus almost 1k gp in price
+# Thanks, Jonas :)
+
+##################################
+#                                #
+#            Weapons             #
+#                                #
+##################################
+
+Weapon Rapier
+
+Weapon Dagger (2)
+    I have hidden both of these inside my armor.
+    Just in case.
+
+##################################
+#                                #
+#         Named Items            #
+#                                #
+##################################
+Item Entertainer's Pack
+    Contains the following items:
+    Backpack,
+    Bedroll,
+    2 Costumes,
+    5 Candles,
+    Waterskin,
+    Disguise Kit
+
+Item Alchemy Jug
+    This ceramic jug appears to be able to hold a gallon of liquid
+    and weighs 12 pounds whether full or empty.
+    Sloshing sounds can be heard from within the jug when it is shaken,
+    even if the jug is empty.
+    You can use an action and name one liquid from the table below
+    to cause the jug to produce the chosen liquid.
+    Afterward, you can uncork the jug as an action and pour that liquid out,
+    up to 2 gallons per minute.
+    The maximum amount of liquid the jug can produce depends on the liquid you named.
+    Once the jug starts producing a liquid,
+    it can't produce a different one, or more of one that has reached its maximum,
+    until the next dawn.
+
+Item Focuses for Clairvoyance
+    A miniature spy glass and a seashell set with glass pearls.
+    Can be used as focuses to cast the Clairvoyance spell.
+    Each item is worth 100gp.
+
+Item  The Honking Handkerchief
+    Traded this from the Hag in Lorlyn.
+    She says its only property is making funny noises when used to blow ones nose,
+    but it is also enchanted to not be easily identifiable.
+    Who knows what else it does?
+
+Item  Corroded Ruby from Corni's shop
+    I took this from Corni's shop when we looked through it.
+    Just like all other things inside, it appears to be covered in
+    a layer of rust, or rot.
+    I should find out what exactly happened to it.
+
+Item Troll's skeletal finger
+    Took this from the Troll's skeleton in the swamp by Muriron.
+    Pipo claims not to know anything about it, even though he was the 
+    only survivor of most recent supposed ``encounter'' with the Troll.
+    When we found the troll it was entirely decomposed,
+    so if the decomposition was natural,
+    it should have been dead when Pipo and the others encountered it.
+
+Equip Ring of Water Walking
+    While wearing this ring, 
+    you can stand on and move across any liquid surface
+    as if it were solid ground.
+
+Equip Eyes of Minute Seeing
+    These crystal lenses fit over the eyes.
+    While wearing them, you can see much better than normal out to a range of 1 foot.
+    You have advantage on Intelligence (Investigation) checks that rely on sight while searching an area or studying an object within that range.
+
+Investigation advantage

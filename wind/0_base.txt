@@ -1,0 +1,13 @@
+Name        Wind
+Race        Tabaxi
+Player      Peter
+Background  Urchin
+Alignment   Neutral Good
+Experience  ---
+
+Str  7
+Dex 16
+Con 17
+Int 11
+Wis 12
+Cha 18
