@@ -831,13 +831,13 @@ def main():
     scanner(filelist)
     
     print_to_tex()
-    #os.mkdir('.tmp')
-    #for _ in range(3):
-    #    os.system('pdflatex -interaction nonstopmode -output-directory .tmp DnDtex_new.tex')
-    #os.rename('.tmp/DnDtex_new.pdf', './DnDtex_new.pdf')
-    #for f in os.scandir('.tmp'):
-    #    os.remove(f)
-    #os.rmdir('.tmp')
+    os.mkdir('.tmp')
+    for _ in range(3):
+        os.system('pdflatex -interaction nonstopmode -output-directory .tmp DnDtex_new.tex')
+    os.rename('.tmp/DnDtex_new.pdf', './DnDtex_new.pdf')
+    for f in os.scandir('.tmp'):
+        os.remove(f)
+    os.rmdir('.tmp')
 
 
 if __name__ == '__main__':

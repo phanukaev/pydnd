@@ -2,8 +2,8 @@ Name        Wind
 Race        Tabaxi
 Player      Peter
 Background  Urchin
-Alignment   Neutral Good
-Experience  asdf
+Alignment   Chaotic Neutral
+Experience  --- 
 
 Str  7
 Dex 16

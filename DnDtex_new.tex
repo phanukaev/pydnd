@@ -66,16 +66,11 @@
     }
 }
 \newcommand{\drawbackgroundgrid}{ %%% GRID FOR SETTING UP TIKZ NODES, IGNORE %%%
-	\backgroundsetup{%
-		position={0,0},opacity=0.2,placement=center,angle=0,scale=1,contents={%
 		    \begin{tikzpicture}[remember picture, overlay, shift=(current page.south west)]
 		        \draw[step=1in, line width=1.5pt, black] (0mm,0mm) grid (\paperwidth,\paperheight);
 		        \draw[help lines, step=.1in,ultra thin] (0mm,0mm) grid (\paperwidth,\paperheight);
 		    \end{tikzpicture}
 		}
-	}
-	\BgThispage
-}
 
 \def\@backgroundimage@path{background.pdf}
 \newcommand{\BackgroundImage}[1]{\def\@backgroundimage@path{#1}}
@@ -160,10 +155,10 @@
         }
         % Ability Check modifiers
         \coordinate (current) at (1.12,8.93);
-        \foreach \abchkMod in \abchkMods{
-            \abchkMod
-            \coordinate (current) at ($(current)-(0,\abystep)$);
-        }
+%        \foreach \abchkMod in \abchkMods{
+%            \abchkMod
+%            \coordinate (current) at ($(current)-(0,\abystep)$);
+%        }
 		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 		%
 		%  Passive Perception
@@ -257,26 +252,26 @@
         % Attacks & Spellcasting
         %
         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        \node at (3.13,5.335) [anchor = south west]
-            {
-                \Attacki
-            };
-        \node at (3.13,5.048) [anchor = south west]
-            {
-                \Attackii
-            };
-        \node at (3.13,4.765) [anchor = south west]
-            {
-                \Attackiii
-            };
-        \node at (3.15,3.1) [
-            anchor = south west
-            ]
-            {
-                \tcboxfit[valign = top, width = 2.3in, height = 1.6in , ] {
-                    \small
-                    \Actions
-            }};
+        %\node at (3.13,5.335) [anchor = south west]
+        %    {
+        %        \Attacki
+        %    };
+        %\node at (3.13,5.048) [anchor = south west]
+        %    {
+        %        \Attackii
+        %    };
+        %\node at (3.13,4.765) [anchor = south west]
+        %    {
+        %        \Attackiii
+        %    };
+        %\node at (3.15,3.1) [
+        %    anchor = south west
+        %    ]
+        %    {
+        %        \tcboxfit[valign = top, width = 2.3in, height = 1.6in , ] {
+        %            \small
+        %            \Actions
+        %    }};
         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
         %
         % Equipment

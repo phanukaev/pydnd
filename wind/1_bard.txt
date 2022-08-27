@@ -1,4 +1,4 @@
-Class Bard 9
+Class Bard 10
 
 #                  #
 # Level 1 features #
@@ -28,7 +28,7 @@ History		proficiency
 # Bardic Inspiration
 Bonus Bardic Inspiration
 
-Feature Bardic Inspiration (d8)
+Feature Bardic Inspiration (d10)
     As a bonus action, give an inspiration die to another creature.
     They may add it to an ability check, attack roll or saving throw.
     Can be used a number of times equal to your charisma modifier ([ChaMod]);
@@ -93,3 +93,10 @@ Reaction Cutting Words
 
 Persuasion      expertise
 Investigation   expertise
+
+#                                           #
+# Level 10: expertise in another two skills #
+#                                           #
+
+Intimidation    expertise
+Arcana          expertise
