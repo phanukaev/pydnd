@@ -1,0 +1,8 @@
+Feature Sustained Symbiosis
+  When you fail a saving throw, you can choose to expend one of your Hit Dice to roll it and add the number rolled to the saving throw, potentially turning the failure into a success.
+  If it uses this feature on a death saving throw, you succeed on the save and regain 1 hit point regardless of the number rolled on the d20.
+  Once you succeed on a saving throw due to this trait, the symbiote can’t use it again until you finish a long rest.
+
+
+Intimidation  proficiency
+Arcana        proficiency
