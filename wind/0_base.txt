@@ -3,7 +3,7 @@ Race        Tabaxi
 Player      Peter
 Background  Urchin
 Alignment   Chaotic Neutral
-Experience  --- 
+Experience  ---
 
 Str  7
 Dex 16

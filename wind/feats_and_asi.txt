@@ -20,12 +20,20 @@ Feature Actor (partial)
     Advantage on Charisma (Decption or Perfomrance)
     checks when trying to pass myself off as another person.
 
-#               #
+#################
 # Linguist Feat #
-#               #
+#################
 
 Feature Linguist (partial)
     Learn 3 languages of my choice.
     1) Aquan.
 
 Language Aquan
+
+
+# ------------- #
+# Resilient Con #
+# ------------- #
+
+Con +1
+Con saves proficiency
